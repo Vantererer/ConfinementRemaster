@@ -1,15 +1,15 @@
-def s_input(question: str, acceptable: list):
-    """
-
-    :rtype: object
-    """
-    accepted = False
-    while not accepted:
+def better_input(question: str, correct_answers: list):
+    correct = False
+    # loop until answer is within the correct_answers list
+    while not correct:
         x = input(question)
-        x = x.replace(" ", "").lower()
-        for z in acceptable:
+        x = x.replace(" ", "").lower() # remove spaces and convert to lowercase
+        for z in correct_answers:
             if x == z:
+                # check answer against every possible answer
                 accepted = True
                 return x
-            if not accepted:
-                print("hi")
+                # return the answer as a string
+        if not accepted:
+            print("Invalid Option")
+
