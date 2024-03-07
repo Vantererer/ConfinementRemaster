@@ -1,4 +1,4 @@
-def better_input(question: str, correct_answers: list):
+def better_input(question: str, correct_answers: list, accepted=None):
     correct = False
     # loop until answer is within the correct_answers list
     while not correct:
